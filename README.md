@@ -13,3 +13,24 @@
 - View Project:
     - Go to `localhost` or `130.108.238.27` in a browser.
     - OR just `curl <address>` with the IP above.
+
+
+## Part 2:
+- Create DockerHub Repo: `https://hub.docker.com/repositories`
+    - Repo Link: `https://hub.docker.com/r/ctm21/project6`
+    - Click 'Create Repository' button. Input name, select public, click create.
+- Docker CLI:
+    - Settings > Security > New Access Token > Read, Write, Delete
+    - `docker login -u ctm21`
+    - For Password: Type access code from 2 steps ago.
+- GitHub Secrets:
+    - Credentials needed are Username and Access Token
+    - In GitHub Repo: Settings > Secrets > New Repository Secret
+    - DOCKER_USERNAME = ctm21
+    - DOCKER_PASSWORD = DockerHub token
+- Configure Workflow:
+    - Replace DOCKER_HUB_REPO with ctm21/project6
+    - Add condition for when pushed to master:
+        - `push:`
+            - `branches: [master]`
+
