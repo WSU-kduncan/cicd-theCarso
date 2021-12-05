@@ -34,3 +34,16 @@
         - `push:`
             - `branches: [master]`
 
+## Part 3:
+- Installation: (From https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+    - `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+    - `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+    - `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"`
+    - `sudo apt install docker-ce`
+    
+- Login:
+    - `sudo docker login` then use Username: ctm21 and Password: {token}
+- Pull:
+    - `sudo docker pull ctm21/project6`
+- Run:
+    - `sudo docker run -dit -p 80:80 ctm21/project6`
